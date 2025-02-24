@@ -129,16 +129,14 @@ function cahngePic() {
 
 function reched(sec) {
     let secTop=sec.offsetTop;
-    let secHeight=sec.offsetHeight;
-    let WindowHeight= window.innerHeight;
     let WindowScrollHeight=window.pageYOffset;
     console.log("done")
-    if (WindowScrollHeight >= (secTop + secHeight - WindowHeight- 200)) {
+    if (WindowScrollHeight >= (secTop - 450)) {
         projectCard.forEach(e => {
             e.classList.add("reached");
         });
     }
-    if (WindowScrollHeight <= (secTop + secHeight - WindowHeight- 200)) {
+    if (WindowScrollHeight <= (secTop-450)) {
         projectCard.forEach(e => {
             if (e.classList.contains("reached")) {
                 e.classList.remove("reached");
