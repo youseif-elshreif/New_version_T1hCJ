@@ -115,6 +115,6 @@ function cahngePic() {
             }
             pic.style.backgroundImage= `url("/images/landing${picNum}.jpeg")`;
             test=picNum;
-        }, 3000);
+        }, 2000);
     }
 }
