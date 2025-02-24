@@ -8,6 +8,8 @@
 
 /* start-global-roles */
 *{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     transition: all var(--main-time);
     -webkit-transition: all var(--main-time);
@@ -17,7 +19,7 @@
     font-family: "Nunito", sans-serif;
 }
 
-html {
+body {
     scroll-behavior: smooth;
 }
 
@@ -187,7 +189,6 @@ a {
     z-index: 10;
     position: relative;
     background-color: white;
-    padding: 10px 0;
 }
 
 .nav .container {
@@ -248,6 +249,10 @@ a {
 
 
 @media (max-width:766px) {
+    .nav{
+        padding: 10px 0;
+    }
+    
     .nav ul{
         flex-direction: column;
         text-align: center;
@@ -359,7 +364,7 @@ a {
     height: 250px;
     border-radius: 50%;
     border: 15px solid var(--sec-color);
-    background-image: url("../images/landing\ \(1\).jpeg");
+    background-image: url("../images/landing1.jpeg");
     background-size: cover;
     background-position: center;
     box-shadow: 2px 2px 25px #454545;
@@ -367,7 +372,7 @@ a {
 
 @media (min-width:992px) {
     .landing{
-        height: calc(100vh - 70.4px);
+        height: calc(100vh - 46px);
     }
     
     .landing .container{
