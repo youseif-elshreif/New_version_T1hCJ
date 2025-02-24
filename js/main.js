@@ -7,6 +7,8 @@ let yesBtn= document.querySelector(".yes");
 let noBtn= document.querySelector(".no");
 let dragedListIcon = document.querySelector(".nav .fa-solid.fa-bars");
 let dragedList = document.querySelector(".nav ul");
+let project =  document.querySelector(".project");
+let projectCard =  document.querySelectorAll(".pro-card");
 let test;
 let changeinterval = null;
 
@@ -37,6 +39,10 @@ window.addEventListener("load",() =>{
         addActiveToEl(noBtn)
         }   
 });
+
+window.onscroll = () => {
+    reched(project)
+}
 
 dragedListIcon.addEventListener("click", ()=> dragedList.classList.toggle("draged"));
 
@@ -115,8 +121,34 @@ function cahngePic() {
             while (test==picNum) {
                 picNum = Math.floor(Math.random() * 5)+1;
             }
-            pic.style.backgroundImage= `url("https://youseif-elshreif.github.io/New_version_T1hCJ/images/landing${picNum}.jpeg")`;
+            pic.style.backgroundImage = `url("${fullPath}/images/landing${picNum}.jpeg")`;
             test=picNum;
         }, 2000);
     }
 }
+
+function reched(sec) {
+    let secTop=sec.offsetTop;
+    let secHeight=sec.offsetHeight;
+    let WindowHeight= window.innerHeight;
+    let WindowScrollHeight=window.pageYOffset;
+    console.log("done")
+    if (WindowScrollHeight >= (secTop + secHeight - WindowHeight- 200)) {
+        projectCard.forEach(e => {
+            e.classList.add("reached");
+        });
+    }
+    if (WindowScrollHeight <= (secTop + secHeight - WindowHeight- 200)) {
+        projectCard.forEach(e => {
+            if (e.classList.contains("reached")) {
+                e.classList.remove("reached");
+            }
+        });
+    }
+}
+
+// pic.style.backgroundImage= `url("https://youseif-elshreif.github.io/New_version_T1hCJ/images/landing${picNum}.jpeg")`;
+// const baseUrl = window.location.origin;
+//             const projectPath = window.location.pathname.split('/').length > 2 ? window.location.pathname.split('/')[1] : ''; 
+//             const fullPath = projectPath ? `${baseUrl}/${projectPath}` : baseUrl;
+//             pic.style.backgroundImage = `url("${fullPath}/images/landing${picNum}.jpeg")`;
