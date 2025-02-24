@@ -60,6 +60,7 @@ thBtns.forEach(e => {
 
 
 yesBtn.addEventListener("click" , () => {
+    changeinterval=null;
     cahngePic();
     localStorage.setItem("pic","yes");
 });
@@ -112,7 +113,7 @@ function cahngePic() {
             while (test==picNum) {
                 picNum = Math.floor(Math.random() * 5)+1;
             }
-            pic.style.backgroundImage= `url("images/landing${picNum}.jpeg")`;
+            pic.style.backgroundImage= `url("/images/landing${picNum}.jpeg")`;
             test=picNum;
         }, 3000);
     }
