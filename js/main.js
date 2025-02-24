@@ -60,7 +60,9 @@ thBtns.forEach(e => {
 
 
 yesBtn.addEventListener("click" , () => {
-    changeinterval=null;
+    if (changeinterval==null) {
+        changeinterval=null;
+    }
     cahngePic();
     localStorage.setItem("pic","yes");
 });
