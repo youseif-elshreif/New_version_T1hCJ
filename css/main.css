@@ -189,6 +189,7 @@ a {
     z-index: 10;
     position: relative;
     background-color: white;
+    padding: 10px 0;
 }
 
 .nav .container {
@@ -260,7 +261,7 @@ a {
         background: white;
         width: 100%;
         left: 0;
-        top: 25px;
+        top: 40px;
         padding: 10px;
     }
     .nav ul li{
@@ -297,10 +298,13 @@ a {
 }
 
 @media (min-width:992px) {
+    .nav {
+        padding: 0;
+    }
+    
     .nav li a {
         padding: 10px;
     }
-    
     .nav i {
         font-size: 35px;
     }
