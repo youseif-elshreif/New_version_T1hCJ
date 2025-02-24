@@ -1,0 +1,37 @@
+[
+    {
+        "num": 0,
+        "mainColor": "#17a2b8",
+        "mainColorHov": "#138496",
+        "secColor": "#00394F",
+        "secColorHov": "#002B3A"
+    },
+    {
+        "num": 1,
+        "mainColor": "#6740be",
+        "mainColorHov": "#4f2f94",
+        "secColor": "#e67e22",
+        "secColorHov": "#c4651c"
+    },
+    {
+        "num": 2,
+        "mainColor": "#c9a227",
+        "mainColorHov": "#a7861f",
+        "secColor": "#242534",
+        "secColorHov": "#1b1c29"
+    },
+    {
+        "num": 3,
+        "mainColor": "#ed2590",
+        "mainColorHov": "#c41e77",
+        "secColor": "#1687a7",
+        "secColorHov": "#116b85"
+    },
+    {
+        "num": 4,
+        "mainColor": "#1c2b4b",
+        "mainColorHov": "#16223d",
+        "secColor": "#c9a227",
+        "secColorHov": "#a7861f"
+    }
+]

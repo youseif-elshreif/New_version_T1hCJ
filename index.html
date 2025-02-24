@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KidEducation</title>
+    <script>
+        let savedColors = localStorage.getItem("colors");
+        if (localStorage.getItem("colors")) {
+            let colors = JSON.parse(savedColors);
+            document.documentElement.style.setProperty(`--main-color`, colors.mainColor);
+            document.documentElement.style.setProperty(`--main-color-hov`, colors.mainColorHov);
+            document.documentElement.style.setProperty(`--sec-color`, colors.secColor);
+            document.documentElement.style.setProperty(`--sec-color-hov`, colors.secColorHov);
+        }
+    </script>
+    <link rel="stylesheet" href="css/normaliz.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="settings">
+        <i class="gear fa-solid fa-gear"></i>
+        <div>
+            <div class="colors">
+                <div class="color active" data-color="0"></div>
+                <div class="color" data-color="1"></div>
+                <div class="color" data-color="2"></div>
+                <div class="color" data-color="3"></div>
+                <div class="color" data-color="4"></div>
+            </div>
+            <div class="pic-controler">
+                <span>Random Pic</span>
+                <div>
+                <button class="yes active th">Yes</button>
+                <button class="no th">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="container">
+            <a class="logo"  href="#">
+                <i class="fa-brands fa-suse"></i>
+                <span>KidEducation</span>
+            </a>
+            <ul class="draged">
+                <li class="active"><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Teachers</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+            <div>
+                <i class="fa-solid fa-bars"></i>
+                <a class="btn" href="#">Join Class</a>
+            </div>
+        </div>
+    </div>
+    <div class="landing">
+        <div class="container">
+            <div class="landing-text">
+                <h4>Kids Learning Center</h4>
+                <h1>New Approach to Kids Education</h1>
+                <p>Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed sit. Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed ipsum at ipsum nonumy amet. Clita lorem dolore sed stet et est justo dolore.</p>
+                <a class="btn" href="#">Learn More</a>
+            </div>
+            <div class="shape"></div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
