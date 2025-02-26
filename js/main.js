@@ -21,7 +21,7 @@ document.addEventListener("click" , (e) => {
     if (!gear.parentElement.contains(e.target) && e.target !== gear){
         gear.parentElement.classList.remove("open");
     }
-    if (!dragedList.contains(e.target) && e.target !== dragedListIcon){
+    if (e.target !== dragedListIcon){
         dragedList.classList.add("draged");
     }
 });
@@ -117,11 +117,11 @@ function colorChanging(colors) {
 function cahngePic() {
     if(changeinterval==null){
         changeinterval = setInterval(() => {
-            let picNum = Math.floor(Math.random() * 5)+1;
+            let picNum = Math.floor(Math.random() * 6)+1;
             while (test==picNum) {
-                picNum = Math.floor(Math.random() * 5)+1;
+                picNum = Math.floor(Math.random() * 6)+1;
             }
-            pic.style.backgroundImage= `url("https://youseif-elshreif.github.io/New_version_T1hCJ/images/landing${picNum}.jpeg")`;
+            pic.style.backgroundImage= `url("/images/landing${picNum}.jpg")`;
             test=picNum;
         }, 2000);
     }
@@ -130,7 +130,6 @@ function cahngePic() {
 function reched(sec) {
     let secTop=sec.offsetTop;
     let WindowScrollHeight=window.pageYOffset;
-    console.log("done")
     if (WindowScrollHeight >= (secTop - 450)) {
         projectCard.forEach(e => {
             e.classList.add("reached");
@@ -145,8 +144,8 @@ function reched(sec) {
     }
 }
 
-// pic.style.backgroundImage= `url("https://youseif-elshreif.github.io/New_version_T1hCJ/images/landing${picNum}.jpeg")`;
+// pic.style.backgroundImage= `url("https://youseif-elshreif.github.io/New_version_T1hCJ/images/landing${picNum}.jpg")`;
 // const baseUrl = window.location.origin;
 //             const projectPath = window.location.pathname.split('/').length > 2 ? window.location.pathname.split('/')[1] : ''; 
 //             const fullPath = projectPath ? `${baseUrl}/${projectPath}` : baseUrl;
-//             pic.style.backgroundImage = `url("${fullPath}/images/landing${picNum}.jpeg")`;
+//             pic.style.backgroundImage = `url("${fullPath}/images/landing${picNum}.jpg")`;
