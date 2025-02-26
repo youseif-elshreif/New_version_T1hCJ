@@ -117,9 +117,9 @@ function colorChanging(colors) {
 function cahngePic() {
     if(changeinterval==null){
         changeinterval = setInterval(() => {
-            let picNum = Math.floor(Math.random() * 6)+1;
+            let picNum = Math.floor(Math.random() * 5)+1;
             while (test==picNum) {
-                picNum = Math.floor(Math.random() * 6)+1;
+                picNum = Math.floor(Math.random() * 5)+1;
             }
             pic.style.backgroundImage= `url("https://youseif-elshreif.github.io/New_version_T1hCJ/images/landing${picNum}.jpeg")`;
             test=picNum;
