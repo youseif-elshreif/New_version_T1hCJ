@@ -453,7 +453,7 @@ a {
     height: 250px;
     border-radius: 50%;
     border: 15px solid var(--sec-color);
-    background-image: url("../images/landing1.jpg");
+    background-image: url("../images/landing1.jpeg");
     background-size: cover;
     background-position: center;
     box-shadow: 2px 2px 25px #454545;
