@@ -271,7 +271,7 @@ a {
 /* start-nav */
 .nav {
     box-shadow: 0px -20px 30px #bebebe;
-    z-index: 10;
+    z-index: 500;
     position: relative;
     background-color: white;
     padding: 10px 0;
