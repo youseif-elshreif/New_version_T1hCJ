@@ -856,6 +856,11 @@ a {
 .teachers .grid-4 div p {
     color: var(--p-color);
 }
+.teachers .grid-4 div p span {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--main-color);
+}
 
 .teachers .grid-4 .pic {
     position: relative;
