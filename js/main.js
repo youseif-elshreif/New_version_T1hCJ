@@ -9,8 +9,7 @@ let dragedListIcon = document.querySelector(".nav .fa-solid.fa-bars");
 let dragedList = document.querySelector(".nav ul");
 let project =  document.querySelector(".project");
 let projectCard =  document.querySelectorAll(".pro-card");
-let test;
-let changeinterval = null;
+let test , changeinterval;
 
 
 gear.addEventListener("click" , () => {
@@ -66,16 +65,13 @@ thBtns.forEach(e => {
 
 
 yesBtn.addEventListener("click" , () => {
-    if (changeinterval==null) {
-        changeinterval=null;
-    }
-    cahngePic();
     localStorage.setItem("pic","yes");
+    cahngePic();
 });
 
 noBtn.addEventListener("click" , () => {
-    clearInterval(changeinterval);
     localStorage.setItem("pic","no");
+    clearInterval(changeinterval);
     localStorage.setItem("picBackGround",pic.style.backgroundImage);
 });
 
@@ -115,7 +111,7 @@ function colorChanging(colors) {
 }
 
 function cahngePic() {
-    if(changeinterval==null){
+    if(localStorage.pic =="yes"){
         changeinterval = setInterval(() => {
             let picNum = Math.floor(Math.random() * 5)+1;
             while (test==picNum) {
