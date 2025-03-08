@@ -14,6 +14,9 @@
             document.documentElement.style.setProperty(`--sec-color-hov`, colors.secColorHov);
         }
     </script>
+    <!-- swiper -->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- style -->
     <link rel="stylesheet" href="css/normaliz.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -22,6 +25,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="pop-up">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
     <div class="settings">
         <i class="gear fa-solid fa-gear"></i>
         <div>
@@ -39,6 +45,12 @@
                 <button class="no th">No</button>
                 </div>
             </div>
+            <div class="pic-controler">
+                <span>Reset Button</span>
+                <div>
+                <button class="reset">Reset</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="nav">
@@ -52,9 +64,8 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#classes">Classes</a></li>
                 <li><a href="#teachers">Teachers</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a href="#testimonial">testimonial</a></li>
+                <li><a href="#blog">blog</a></li>
             </ul>
             <div>
                 <i class="fa-solid fa-bars"></i>
@@ -317,7 +328,7 @@
                     <img src="images/teacher3.jpg" loading="lazy">
                 </div>
                 <h4>Amooor</h4>
-                <p>5ateb 2l2nsa <span>O</span></p>
+                <p>5ateb 2l2ansa <span>O</span></p>
             </div>
             <div class="teacher">
                 <div class="pic">
@@ -334,6 +345,150 @@
             </div>
         </div>
     </div>
+    <div id="testimonial" class="container testimonial">
+        <div class="head">
+            <span>Testimonial</span>
+            <h1>What Parents Say!</h1>
+        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita</p>
+                    <div class="swiper-card">
+                        <div class="imag">
+                            <img src="images/teacher1.jpg" alt="">
+                        </div>
+                        <h4>Ibn 3am Saif</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita</p>
+                    <div class="swiper-card">
+                        <div class="imag">
+                            <img src="images/teacher4 (1).jpg" alt="">
+                        </div>
+                        <h4>Elloz</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita</p>
+                    <div class="swiper-card">
+                        <div class="imag">
+                            <img src="images/teacher2.jpg" alt="">
+                        </div>
+                        <h4>Youseif</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita</p>
+                    <div class="swiper-card">
+                        <div class="imag">
+                            <img src="images/teacher3.jpg" alt="">
+                        </div>
+                        <h4>Amooor</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr eirmod clita lorem. Dolor tempor ipsum clita</p>
+                    <div class="swiper-card">
+                        <div class="imag">
+                            <img src="images/teacher4 (1).jpg" alt="">
+                        </div>
+                        <h4>Elloz</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div id="blog" class="blog">
+        <div class="head">
+            <span>Latest Blog</span>
+            <h1>Latest Articles From Blog</h1>
+        </div>
+        <div class="grid-3 container">
+            <div class="card">
+                <img src="images/blog1.jpg" loading="lazy">
+                <div class="card-text">
+                    <div class="headd">
+                    <h4>Drawing Class</h4>
+                    <div class="blog-icon">
+                        <div class="blog-icon2">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Admin</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Web Design</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-comment"></i>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
+                    </div>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/blog2.jpg" loading="lazy">
+                <div class="card-text">
+                    <div class="headd">
+                    <h4>Basic Science</h4>
+                    <div class="blog-icon">
+                        <div class="blog-icon2">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Admin</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Web Design</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-comment"></i>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
+                    </div>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/blog3.jpg" loading="lazy">
+                <div class="card-text">
+                    <div class="headd">
+                    <h4>Language Learning</h4>
+                    <div class="blog-icon">
+                        <div class="blog-icon2">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Admin</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-folder"></i>
+                            <span>Web Design</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-comment"></i>
+                            <span>15</span>
+                        </div>
+                    </div>
+                    <p>Sed kasd sea sed at elitr sed ipsum justo, sit nonumy diam eirmod, duo et sed sit eirmod kasd clita tempor dolor stet lorem. Tempor ipsum justo amet stet...</p>
+                    </div>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="container">
+            <a class="logo"  href="#">
+            <i class="fa-brands fa-suse"></i>
+            <span>KidEducation</span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -5,6 +5,8 @@ let pic = document.querySelector("div.shape");
 let thBtns= [...document.getElementsByClassName("th")];
 let yesBtn= document.querySelector(".yes");
 let noBtn= document.querySelector(".no");
+let resetBtn= document.querySelector(".reset");
+let popUp= document.querySelector(".pop-up");
 let dragedListIcon = document.querySelector(".nav .fa-solid.fa-bars");
 let dragedList = document.querySelector(".nav ul");
 let project =  document.querySelector(".project");
@@ -35,12 +37,12 @@ window.addEventListener("load",() =>{
     }else{
         pic.style.backgroundImage =localStorage.picBackGround;
         removeActiveFromEls(thBtns);
-        addActiveToEl(noBtn)
+        addActiveToEl(noBtn);
         }   
 });
 
 window.onscroll = () => {
-    reched(project)
+    reched(project);
 }
 
 dragedListIcon.addEventListener("click", ()=> dragedList.classList.toggle("draged"));
@@ -65,14 +67,21 @@ thBtns.forEach(e => {
 
 
 yesBtn.addEventListener("click" , () => {
-    localStorage.setItem("pic","yes");
-    cahngePic();
+    if (!localStorage.getItem("pic")) {
+        localStorage.setItem("pic","yes");
+        cahngePic();
+    }
 });
 
 noBtn.addEventListener("click" , () => {
     localStorage.setItem("pic","no");
     clearInterval(changeinterval);
     localStorage.setItem("picBackGround",pic.style.backgroundImage);
+});
+
+resetBtn.addEventListener("click" , async () => {
+    localStorage.clear();
+    window.location.reload();
 });
 
 function addActiveToEl(e) {
@@ -111,13 +120,13 @@ function colorChanging(colors) {
 }
 
 function cahngePic() {
-    if(localStorage.pic =="yes"){
+    if(localStorage.getItem("pic")=="yes"||!localStorage.getItem("pic")){
         changeinterval = setInterval(() => {
             let picNum = Math.floor(Math.random() * 5)+1;
             while (test==picNum) {
                 picNum = Math.floor(Math.random() * 5)+1;
             }
-            pic.style.backgroundImage= `url("https://youseif-elshreif.github.io/New_version_T1hCJ/images/landing${picNum}.jpeg")`;
+            pic.style.backgroundImage= `url("/images/landing${picNum}.jpeg")`;
             test=picNum;
         }, 2000);
     }
@@ -129,19 +138,50 @@ function reched(sec) {
     if (WindowScrollHeight >= (secTop - 450)) {
         projectCard.forEach(e => {
             e.classList.add("reached");
+            popUp.style.opacity=1;
         });
     }
     if (WindowScrollHeight <= (secTop-450)) {
         projectCard.forEach(e => {
             if (e.classList.contains("reached")) {
                 e.classList.remove("reached");
+                popUp.style.opacity=0;
             }
         });
     }
 }
+
+const swiper = new Swiper('.swiper', {
+    centeredSlides: true, 
+    loop: true, 
+    spaceBetween: 10, 
+    initialSlide: 1, 
+
+    autoplay: {
+        delay: 3000, 
+        disableOnInteraction: false, 
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1, 
+        },
+        766: { 
+            slidesPerView: 2, 
+        }
+    }
+});
 
 // pic.style.backgroundImage= `url("https://youseif-elshreif.github.io/New_version_T1hCJ/images/landing${picNum}.jpg")`;
 // const baseUrl = window.location.origin;
 //             const projectPath = window.location.pathname.split('/').length > 2 ? window.location.pathname.split('/')[1] : ''; 
 //             const fullPath = projectPath ? `${baseUrl}/${projectPath}` : baseUrl;
 //             pic.style.backgroundImage = `url("${fullPath}/images/landing${picNum}.jpg")`;
+
+
+
