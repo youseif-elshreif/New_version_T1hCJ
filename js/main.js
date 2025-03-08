@@ -126,7 +126,7 @@ function cahngePic() {
             while (test==picNum) {
                 picNum = Math.floor(Math.random() * 5)+1;
             }
-            pic.style.backgroundImage= `url("/images/landing${picNum}.jpeg")`;
+            pic.style.backgroundImage= `url("https://youseif-elshreif.github.io/New_version_T1hCJ/images/landing${picNum}.jpg")`;
             test=picNum;
         }, 2000);
     }
