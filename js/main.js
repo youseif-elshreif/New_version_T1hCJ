@@ -67,7 +67,7 @@ thBtns.forEach(e => {
 
 
 yesBtn.addEventListener("click" , () => {
-    if (!localStorage.getItem("pic")) {
+    if (!localStorage.getItem("pic")||localStorage.getItem("pic")=="no") {
         localStorage.setItem("pic","yes");
         cahngePic();
     }
