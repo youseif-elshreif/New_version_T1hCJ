@@ -33,7 +33,7 @@ window.addEventListener("load",() =>{
         addActiveToEl(colorChangerEl[JSON.parse(localStorage.colors).num])
     }
     if (localStorage.getItem("pic")=="yes"||!localStorage.getItem("pic")) {
-        cahngePic();
+        changePic();
     }else{
         pic.style.backgroundImage =localStorage.picBackGround;
         removeActiveFromEls(thBtns);
@@ -42,7 +42,7 @@ window.addEventListener("load",() =>{
 });
 
 window.onscroll = () => {
-    reched(project);
+    reached(project);
 }
 
 dragedListIcon.addEventListener("click", ()=> dragedList.classList.toggle("draged"));
@@ -69,7 +69,7 @@ thBtns.forEach(e => {
 yesBtn.addEventListener("click" , () => {
     if (!localStorage.getItem("pic")||localStorage.getItem("pic")=="no") {
         localStorage.setItem("pic","yes");
-        cahngePic();
+        changePic();
     }
 });
 
@@ -119,7 +119,7 @@ function colorChanging(colors) {
     document.documentElement.style.setProperty(`--sec-color-hov`, colors.secColorHov);
 }
 
-function cahngePic() {
+function changePic() {
     if(localStorage.getItem("pic")=="yes"||!localStorage.getItem("pic")){
         changeinterval = setInterval(() => {
             let picNum = Math.floor(Math.random() * 5)+1;
@@ -132,7 +132,7 @@ function cahngePic() {
     }
 }
 
-function reched(sec) {
+function reached(sec) {
     let secTop=sec.offsetTop;
     let WindowScrollHeight=window.pageYOffset;
     if (WindowScrollHeight >= (secTop - 450)) {
@@ -182,6 +182,3 @@ const swiper = new Swiper('.swiper', {
 //             const projectPath = window.location.pathname.split('/').length > 2 ? window.location.pathname.split('/')[1] : ''; 
 //             const fullPath = projectPath ? `${baseUrl}/${projectPath}` : baseUrl;
 //             pic.style.backgroundImage = `url("${fullPath}/images/landing${picNum}.jpg")`;
-
-
-
