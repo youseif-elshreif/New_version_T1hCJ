@@ -171,6 +171,7 @@ a {
     -o-border-radius: 50%;
     z-index: 500;
     opacity: 0;
+    contain: content;
 }
 
 .pop-up a {
@@ -324,6 +325,8 @@ a {
 .nav ul {
     display: flex;
     transform-origin: top;
+    will-change: transform;
+    contain: layout;
 }
 
 .nav li a{
@@ -483,6 +486,8 @@ a {
     background-size: cover;
     background-position: center;
     box-shadow: 2px 2px 25px #454545;
+    will-change: background-image;
+    contain: paint;
 }
 
 @media (min-width:992px) {
@@ -532,6 +537,8 @@ a {
     -ms-transition: all 1s;
     -o-transition: all 1s;
     z-index: -1;
+    will-change: transform;
+    contain: layout;
 }
 
 .project .grid-3 .pro-card:nth-child(1) {
